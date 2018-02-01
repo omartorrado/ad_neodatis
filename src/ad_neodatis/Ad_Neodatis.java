@@ -13,10 +13,10 @@ import org.neodatis.odb.Objects;
  *
  * @author oracle
  */
-public class Ad_Neodatis {    
+public class Ad_Neodatis {
 
     public static void main(String[] args) {
-        DBHandler db=new DBHandler();
+        DBHandler db = new DBHandler();
         db.conectar();
         try {
             //db.step2();
@@ -24,25 +24,32 @@ public class Ad_Neodatis {
             //db.mostrarDeportes();
             //db.actualizarNombreJugador("patata", "luis");
             //db.mostrarJugadores();
-            db.mostrarJugadoresDeporte("Tennis");
-            
-            
+            //db.mostrarJugadoresDeporte("volley-ball");
+            //db.mostrarJugadoresCobrenMenosDe(2000);
+            //db.cambiarNombreJugadoresDeporte("Tennis", "Felipe");
+            //db.mostrarJugadoresDeporteLetra("vo");
+            //db.borrarJugadoresPorNombre("luis");
+            //db.mostrarJugadoresDeporteYNombre("Tennis", "carlos");
+            //db.aumentarSalarioTodosJugadoresEquipo("Paris", 5000, "olivier");
+               
+
             /*
-            //Recuperamos la lista de objetos y los vamos casteando al iterar por ella, para acceder a sus metodos
+             //Recuperamos la lista de objetos y los vamos casteando al iterar por ella, para acceder a sus metodos
             
-            Objects<Object> lista=db.buscarObjecto(Player.class, "name", "luis");
+             Objects<Object> lista=db.buscarObjecto(Player.class, "name", "luis");
             
-            System.out.println(lista.toArray()[0]);
-            while(lista.hasNext()){
-                System.out.println("Hay next");
-                Player p=(Player)lista.next();
-                System.out.println(p.getName());
-            }
-                    */
+             System.out.println(lista.toArray()[0]);
+             while(lista.hasNext()){
+             System.out.println("Hay next");
+             Player p=(Player)lista.next();
+             System.out.println(p.getName());
+             }
+             */
+            db.desconectar();
         } catch (Exception ex) {
             Logger.getLogger(Ad_Neodatis.class.getName()).log(Level.SEVERE, null, ex);
         }
-        db.desconectar();
+
     }
-        
+
 }
